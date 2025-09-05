@@ -7,21 +7,12 @@ This Python script is a simple, automated solution for organizing files. It uses
 * Duplicate File Handling: If a file with the same name already exists in the destination folder, the script will rename the new file by adding a counter (e.g., `filename(1).mp4`).
 
 ## Requirements
-Before you can run this script, you need to install the `watchdog` library. You can do this using `pip`:
+Before you can run this script, you need to install the required Python packages. You can do this using the provided `requirements.txt` file: `pip install -r requirements.txt`
 
-```
-pip install watchdog
-```
 ## How to Use
-1. Customize Paths: Open the Python script (`FileAutomation.py`) and modify the following variables at the top to match your system's directory:
+Customize Paths: A `config.ini` file is included to make it easy to customize the script's behavior. Before running, create your own copy of the configuration file and update the paths.
 
-```
-source_dir = "/path/to/your/source/folder"
-dest_dir_music = "/path/to/your/Music"
-dest_dir_video = "/path/to/your/Videos"
-dest_dir_image = "/path/to/your/Pictures"
-dest_dir_documents = "/path/to/your/Documents"
-```
+Open `config.ini` and modify the path values to match your system's directory structure. Please use absolute paths to ensure the script runs correctly.
 
 
 Run the Script: Execute the script from your terminal:
