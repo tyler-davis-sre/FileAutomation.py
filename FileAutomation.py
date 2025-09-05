@@ -4,17 +4,21 @@ from shutil import move
 from time import sleep
 
 import logging
-
+import configparser
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-# Fill this in Below #
 
-source_dir = "/home/tyler/Downloads"
-dest_dir_music = "/home/tyler/Music"
-dest_dir_video = "/home/tyler/Videos"
-dest_dir_image = "/home/tyler/Pictures"
-dest_dir_documents = "/home/tyler/Documents"
+# Create a ConfigParser object
+config = configparser.ConfigParser()
+config.read('config.ini')
+
+# Read the paths from the config file
+source_dir = config['PATHS']['source_dir']
+dest_dir_music = config['PATHS']['dest_dir_music']
+dest_dir_video = config['PATHS']['dest_dir_video']
+dest_dir_image = config['PATHS']['dest_dir_image']
+dest_dir_documents = config['PATHS']['dest_dir_documents']
 
 # Supported image types #
 image_extensions = [".jpeg", ".jpg", ".jpe", ".jif", ".png", ".gif"]
